@@ -22,4 +22,41 @@ $(document).ready(function () {
       2000
     );
   });
+
+  $(".list-item:eq(1)").on("click", function () {
+    if (this.style.backgroundColor === "green") {
+      $(this).css("background-color", "");
+    } else {
+      $(this).css("background-color", "green");
+    }
+  });
+
+  const availableTags = [
+    "ActionScript",
+    "AppleScript",
+    "Asp",
+    "BASIC",
+    "C",
+    "C++",
+    "Clojure",
+    "COBOL",
+    "ColdFusion",
+    "Erlang",
+    "Fortran",
+    "Groovy",
+    "Haskell",
+    "Java",
+    "JavaScript",
+    "Lisp",
+    "Perl",
+    "PHP",
+    "Python",
+    "Ruby",
+    "Scala",
+    "Scheme",
+  ];
+  // autocomplete is not a function
+  // $("#tags").autocomplete({ source: availableTags });
+
+  $(".list-item:eq(3)").draggable();
 });
